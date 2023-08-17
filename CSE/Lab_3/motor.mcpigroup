@@ -1,0 +1,7 @@
+[PROJECTS]
+Count=3
+Project0=LAb_2\sevenSegment.mcppi
+Project1=relay.mcppi
+Project2=motor.mcppi
+[ActiveProject]
+Index=2
