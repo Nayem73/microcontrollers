@@ -1,0 +1,11 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP16F877A -DL -O11111114 -fo8 -N"C:\Users\nayem\OneDrive\Desktop\microcontroller\MotorWorking\New folder - for LED Blinking\MotorWithLedBlinking.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" -SP"C:\Users\nayem\OneDrive\Desktop\microcontroller\MotorWorking\New folder - for LED Blinking\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" "MotorWithLedBlinking.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl"	 
+hint: 0	1139	Available RAM: 352 [bytes], Available ROM: 8192 [bytes]	 
+diagnostics: 0	122	Compilation Started	MotorWithLedBlinking.c
+diagnostics: 76	123	Compiled Successfully	MotorWithLedBlinking.c
+diagnostics: 0	127	All files Compiled in 140 ms	 
+hint: 0	1144	Used RAM (bytes): 6 (2%)  Free RAM (bytes): 346 (98%)	Used RAM (bytes): 6 (2%)  Free RAM (bytes): 346 (98%)
+hint: 0	1144	Used ROM (program words): 189 (2%)  Free ROM (program words): 8003 (98%)	Used ROM (program words): 189 (2%)  Free ROM (program words): 8003 (98%)
+diagnostics: 0	125	Project Linked Successfully	MotorWithLedBlinking.mcppi
+diagnostics: 0	128	Linked in 17047 ms	 
+diagnostics: 0	129	Project 'MotorWithLedBlinking.mcppi' completed: 20219 ms	 
+diagnostics: 0	103	Finished successfully: 21 Aug 2023, 11:04:24	MotorWithLedBlinking.mcppi

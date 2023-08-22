@@ -20,7 +20,7 @@ L_main0:
 	BSF        PORTB+0, 0
 ;MyProject.c,17 :: 		portb.RB1 = 0; //with these 2 lines
 	BCF        PORTB+0, 1
-;MyProject.c,20 :: 		for (i = 0; i < 100; i++) { // Divide the delay into smaller intervals
+;MyProject.c,20 :: 		for (i = 0; i < 400; i++) { // Divide the delay into smaller intervals
 	CLRF       _i+0
 	CLRF       _i+1
 L_main3:
@@ -28,10 +28,11 @@ L_main3:
 	XORWF      _i+1, 0
 	MOVWF      R0+0
 	MOVLW      128
+	XORLW      1
 	SUBWF      R0+0, 0
 	BTFSS      STATUS+0, 2
 	GOTO       L__main18
-	MOVLW      100
+	MOVLW      144
 	SUBWF      _i+0, 0
 L__main18:
 	BTFSC      STATUS+0, 0
@@ -59,7 +60,7 @@ L_main6:
 	GOTO       L_main4
 ;MyProject.c,26 :: 		}
 L_main7:
-;MyProject.c,20 :: 		for (i = 0; i < 100; i++) { // Divide the delay into smaller intervals
+;MyProject.c,20 :: 		for (i = 0; i < 400; i++) { // Divide the delay into smaller intervals
 	INCF       _i+0, 1
 	BTFSC      STATUS+0, 2
 	INCF       _i+1, 1
@@ -90,7 +91,7 @@ L_main9:
 	BCF        PORTB+0, 0
 ;MyProject.c,38 :: 		portb.RB1 = 1; //with these 2 lines
 	BSF        PORTB+0, 1
-;MyProject.c,40 :: 		for (i = 0; i < 100; i++) { // Divide the delay into smaller intervals
+;MyProject.c,40 :: 		for (i = 0; i < 400; i++) { // Divide the delay into smaller intervals
 	CLRF       _i+0
 	CLRF       _i+1
 L_main12:
@@ -98,10 +99,11 @@ L_main12:
 	XORWF      _i+1, 0
 	MOVWF      R0+0
 	MOVLW      128
+	XORLW      1
 	SUBWF      R0+0, 0
 	BTFSS      STATUS+0, 2
 	GOTO       L__main19
-	MOVLW      100
+	MOVLW      144
 	SUBWF      _i+0, 0
 L__main19:
 	BTFSC      STATUS+0, 0
@@ -129,7 +131,7 @@ L_main15:
 	GOTO       L_main13
 ;MyProject.c,46 :: 		}
 L_main16:
-;MyProject.c,40 :: 		for (i = 0; i < 100; i++) { // Divide the delay into smaller intervals
+;MyProject.c,40 :: 		for (i = 0; i < 400; i++) { // Divide the delay into smaller intervals
 	INCF       _i+0, 1
 	BTFSC      STATUS+0, 2
 	INCF       _i+1, 1
