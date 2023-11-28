@@ -1,0 +1,3 @@
+main
+	motorRotate180
+	motorRotate90
