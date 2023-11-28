@@ -326,14 +326,6 @@ pspif_bit
 pspmode
 pspmode_bit
 pspmode_trise_bit
-pwm1_init
-pwm1_set_duty
-pwm1_start
-pwm1_stop
-pwm2_init
-pwm2_set_duty
-pwm2_start
-pwm2_stop
 r
 r_bit
 r_not_w

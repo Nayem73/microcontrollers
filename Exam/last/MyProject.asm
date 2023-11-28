@@ -1,224 +1,162 @@
 
-_motorRotate0:
-
-;MyProject.c,2 :: 		void motorRotate0() {
-;MyProject.c,3 :: 		for (i = 0; i < 50; i++) {
-	CLRF       _i+0
-	CLRF       _i+1
-L_motorRotate00:
-	MOVLW      128
-	XORWF      _i+1, 0
-	MOVWF      R0+0
-	MOVLW      128
-	SUBWF      R0+0, 0
-	BTFSS      STATUS+0, 2
-	GOTO       L__motorRotate020
-	MOVLW      50
-	SUBWF      _i+0, 0
-L__motorRotate020:
-	BTFSC      STATUS+0, 0
-	GOTO       L_motorRotate01
-;MyProject.c,4 :: 		portb.f0 = 1;
-	BSF        PORTB+0, 0
-;MyProject.c,5 :: 		delay_us(800);
-	MOVLW      3
-	MOVWF      R12+0
-	MOVLW      18
-	MOVWF      R13+0
-L_motorRotate03:
-	DECFSZ     R13+0, 1
-	GOTO       L_motorRotate03
-	DECFSZ     R12+0, 1
-	GOTO       L_motorRotate03
-	NOP
-;MyProject.c,6 :: 		portb.f0 = 0;
-	BCF        PORTB+0, 0
-;MyProject.c,7 :: 		delay_us(19200);
-	MOVLW      50
-	MOVWF      R12+0
-	MOVLW      221
-	MOVWF      R13+0
-L_motorRotate04:
-	DECFSZ     R13+0, 1
-	GOTO       L_motorRotate04
-	DECFSZ     R12+0, 1
-	GOTO       L_motorRotate04
-	NOP
-	NOP
-;MyProject.c,3 :: 		for (i = 0; i < 50; i++) {
-	INCF       _i+0, 1
-	BTFSC      STATUS+0, 2
-	INCF       _i+1, 1
-;MyProject.c,8 :: 		}
-	GOTO       L_motorRotate00
-L_motorRotate01:
-;MyProject.c,9 :: 		}
-L_end_motorRotate0:
-	RETURN
-; end of _motorRotate0
-
-_motorRotate90:
-
-;MyProject.c,10 :: 		void motorRotate90() {
-;MyProject.c,11 :: 		for (i = 0; i < 50; i++) {
-	CLRF       _i+0
-	CLRF       _i+1
-L_motorRotate905:
-	MOVLW      128
-	XORWF      _i+1, 0
-	MOVWF      R0+0
-	MOVLW      128
-	SUBWF      R0+0, 0
-	BTFSS      STATUS+0, 2
-	GOTO       L__motorRotate9022
-	MOVLW      50
-	SUBWF      _i+0, 0
-L__motorRotate9022:
-	BTFSC      STATUS+0, 0
-	GOTO       L_motorRotate906
-;MyProject.c,12 :: 		portb.f0 = 1;
-	BSF        PORTB+0, 0
-;MyProject.c,13 :: 		delay_us(1500);
-	MOVLW      4
-	MOVWF      R12+0
-	MOVLW      228
-	MOVWF      R13+0
-L_motorRotate908:
-	DECFSZ     R13+0, 1
-	GOTO       L_motorRotate908
-	DECFSZ     R12+0, 1
-	GOTO       L_motorRotate908
-	NOP
-;MyProject.c,14 :: 		portb.f0 = 0;
-	BCF        PORTB+0, 0
-;MyProject.c,15 :: 		delay_us(18500);
-	MOVLW      49
-	MOVWF      R12+0
-	MOVLW      11
-	MOVWF      R13+0
-L_motorRotate909:
-	DECFSZ     R13+0, 1
-	GOTO       L_motorRotate909
-	DECFSZ     R12+0, 1
-	GOTO       L_motorRotate909
-	NOP
-	NOP
-;MyProject.c,11 :: 		for (i = 0; i < 50; i++) {
-	INCF       _i+0, 1
-	BTFSC      STATUS+0, 2
-	INCF       _i+1, 1
-;MyProject.c,16 :: 		}
-	GOTO       L_motorRotate905
-L_motorRotate906:
-;MyProject.c,17 :: 		}
-L_end_motorRotate90:
-	RETURN
-; end of _motorRotate90
-
-_motorRotate180:
-
-;MyProject.c,20 :: 		void motorRotate180() {
-;MyProject.c,21 :: 		for (i = 0; i < 50; i++) {
-	CLRF       _i+0
-	CLRF       _i+1
-L_motorRotate18010:
-	MOVLW      128
-	XORWF      _i+1, 0
-	MOVWF      R0+0
-	MOVLW      128
-	SUBWF      R0+0, 0
-	BTFSS      STATUS+0, 2
-	GOTO       L__motorRotate18024
-	MOVLW      50
-	SUBWF      _i+0, 0
-L__motorRotate18024:
-	BTFSC      STATUS+0, 0
-	GOTO       L_motorRotate18011
-;MyProject.c,22 :: 		portb.f0 = 1;
-	BSF        PORTB+0, 0
-;MyProject.c,23 :: 		delay_us(2200);
-	MOVLW      6
-	MOVWF      R12+0
-	MOVLW      181
-	MOVWF      R13+0
-L_motorRotate18013:
-	DECFSZ     R13+0, 1
-	GOTO       L_motorRotate18013
-	DECFSZ     R12+0, 1
-	GOTO       L_motorRotate18013
-	NOP
-	NOP
-;MyProject.c,24 :: 		portb.f0 = 0;
-	BCF        PORTB+0, 0
-;MyProject.c,25 :: 		delay_us(17800);
-	MOVLW      47
-	MOVWF      R12+0
-	MOVLW      58
-	MOVWF      R13+0
-L_motorRotate18014:
-	DECFSZ     R13+0, 1
-	GOTO       L_motorRotate18014
-	DECFSZ     R12+0, 1
-	GOTO       L_motorRotate18014
-	NOP
-;MyProject.c,21 :: 		for (i = 0; i < 50; i++) {
-	INCF       _i+0, 1
-	BTFSC      STATUS+0, 2
-	INCF       _i+1, 1
-;MyProject.c,26 :: 		}
-	GOTO       L_motorRotate18010
-L_motorRotate18011:
-;MyProject.c,27 :: 		}
-L_end_motorRotate180:
-	RETURN
-; end of _motorRotate180
-
 _main:
 
-;MyProject.c,29 :: 		void main() {
-;MyProject.c,30 :: 		TRISB = 0x00;
+;MyProject.c,1 :: 		void main() {
+;MyProject.c,2 :: 		short duty = 0;
+	CLRF       main_duty_L0+0
+;MyProject.c,3 :: 		TRISB = 0x00;
 	CLRF       TRISB+0
-;MyProject.c,31 :: 		while (1) {
-L_main15:
-;MyProject.c,32 :: 		motorRotate180();
-	CALL       _motorRotate180+0
-;MyProject.c,33 :: 		delay_ms(1000);
-	MOVLW      11
+;MyProject.c,4 :: 		TRISD = 0xFF;
+	MOVLW      255
+	MOVWF      TRISD+0
+;MyProject.c,6 :: 		portb.f0 = 1;
+	BSF        PORTB+0, 0
+;MyProject.c,7 :: 		portb.f1 = 0;
+	BCF        PORTB+0, 1
+;MyProject.c,9 :: 		PWM1_init(1000);
+	BSF        T2CON+0, 0
+	BSF        T2CON+0, 1
+	MOVLW      124
+	MOVWF      PR2+0
+	CALL       _PWM1_Init+0
+;MyProject.c,10 :: 		PWM1_start();
+	CALL       _PWM1_Start+0
+;MyProject.c,11 :: 		PWM1_Set_Duty(duty);
+	MOVF       main_duty_L0+0, 0
+	MOVWF      FARG_PWM1_Set_Duty_new_duty+0
+	CALL       _PWM1_Set_Duty+0
+;MyProject.c,13 :: 		while (1) {
+L_main0:
+;MyProject.c,14 :: 		if (portd.f0 == 1 && duty < 250) {
+	BTFSS      PORTD+0, 0
+	GOTO       L_main4
+	MOVLW      128
+	BTFSC      main_duty_L0+0, 7
+	MOVLW      127
+	MOVWF      R0+0
+	MOVLW      128
+	SUBWF      R0+0, 0
+	BTFSS      STATUS+0, 2
+	GOTO       L__main22
+	MOVLW      250
+	SUBWF      main_duty_L0+0, 0
+L__main22:
+	BTFSC      STATUS+0, 0
+	GOTO       L_main4
+L__main20:
+;MyProject.c,15 :: 		delay_ms(100);
+	MOVLW      2
 	MOVWF      R11+0
-	MOVLW      38
+	MOVLW      4
 	MOVWF      R12+0
-	MOVLW      93
+	MOVLW      186
 	MOVWF      R13+0
-L_main17:
+L_main5:
 	DECFSZ     R13+0, 1
-	GOTO       L_main17
+	GOTO       L_main5
 	DECFSZ     R12+0, 1
-	GOTO       L_main17
+	GOTO       L_main5
 	DECFSZ     R11+0, 1
-	GOTO       L_main17
+	GOTO       L_main5
 	NOP
-	NOP
-;MyProject.c,35 :: 		motorRotate90();
-	CALL       _motorRotate90+0
-;MyProject.c,36 :: 		delay_ms(1000);
-	MOVLW      11
+;MyProject.c,16 :: 		if (portd.f0 == 1 && duty < 250) {
+	BTFSS      PORTD+0, 0
+	GOTO       L_main8
+	MOVLW      128
+	BTFSC      main_duty_L0+0, 7
+	MOVLW      127
+	MOVWF      R0+0
+	MOVLW      128
+	SUBWF      R0+0, 0
+	BTFSS      STATUS+0, 2
+	GOTO       L__main23
+	MOVLW      250
+	SUBWF      main_duty_L0+0, 0
+L__main23:
+	BTFSC      STATUS+0, 0
+	GOTO       L_main8
+L__main19:
+;MyProject.c,17 :: 		duty += 10;
+	MOVLW      10
+	ADDWF      main_duty_L0+0, 0
+	MOVWF      R0+0
+	MOVF       R0+0, 0
+	MOVWF      main_duty_L0+0
+;MyProject.c,18 :: 		PWM1_Set_Duty(duty);
+	MOVF       R0+0, 0
+	MOVWF      FARG_PWM1_Set_Duty_new_duty+0
+	CALL       _PWM1_Set_Duty+0
+;MyProject.c,19 :: 		}
+L_main8:
+;MyProject.c,20 :: 		}
+L_main4:
+;MyProject.c,22 :: 		if (portd.f1 == 1 && duty > 0) {
+	BTFSS      PORTD+0, 1
+	GOTO       L_main11
+	MOVLW      128
+	XORLW      0
+	MOVWF      R0+0
+	MOVLW      128
+	XORWF      main_duty_L0+0, 0
+	SUBWF      R0+0, 0
+	BTFSC      STATUS+0, 0
+	GOTO       L_main11
+L__main18:
+;MyProject.c,23 :: 		delay_ms(100);
+	MOVLW      2
 	MOVWF      R11+0
-	MOVLW      38
+	MOVLW      4
 	MOVWF      R12+0
-	MOVLW      93
+	MOVLW      186
 	MOVWF      R13+0
-L_main18:
+L_main12:
 	DECFSZ     R13+0, 1
-	GOTO       L_main18
+	GOTO       L_main12
 	DECFSZ     R12+0, 1
-	GOTO       L_main18
+	GOTO       L_main12
 	DECFSZ     R11+0, 1
-	GOTO       L_main18
+	GOTO       L_main12
 	NOP
-	NOP
-;MyProject.c,39 :: 		}
+;MyProject.c,24 :: 		if (portd.f1 == 1 && duty > 0) {
+	BTFSS      PORTD+0, 1
 	GOTO       L_main15
-;MyProject.c,40 :: 		}
+	MOVLW      128
+	XORLW      0
+	MOVWF      R0+0
+	MOVLW      128
+	XORWF      main_duty_L0+0, 0
+	SUBWF      R0+0, 0
+	BTFSC      STATUS+0, 0
+	GOTO       L_main15
+L__main17:
+;MyProject.c,25 :: 		duty -= 10;
+	MOVLW      10
+	SUBWF      main_duty_L0+0, 0
+	MOVWF      R0+0
+	MOVF       R0+0, 0
+	MOVWF      main_duty_L0+0
+;MyProject.c,26 :: 		PWM1_Set_Duty(duty);
+	MOVF       R0+0, 0
+	MOVWF      FARG_PWM1_Set_Duty_new_duty+0
+	CALL       _PWM1_Set_Duty+0
+;MyProject.c,27 :: 		}
+L_main15:
+;MyProject.c,28 :: 		}
+L_main11:
+;MyProject.c,29 :: 		delay_ms(10);
+	MOVLW      26
+	MOVWF      R12+0
+	MOVLW      248
+	MOVWF      R13+0
+L_main16:
+	DECFSZ     R13+0, 1
+	GOTO       L_main16
+	DECFSZ     R12+0, 1
+	GOTO       L_main16
+	NOP
+;MyProject.c,30 :: 		}
+	GOTO       L_main0
+;MyProject.c,31 :: 		}
 L_end_main:
 	GOTO       $+0
 ; end of _main
